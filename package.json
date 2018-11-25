@@ -1,0 +1,19 @@
+{
+  "name": "surf-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KarthikrajS/surf-api.git",
+  "author": "KarthikrajS <karthikraj1995@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- src/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
