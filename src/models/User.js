@@ -15,6 +15,14 @@ const schema = new mongoose.Schema({
     passwordHash:{
         type:String,
         required:true
+    },
+    confirmed:{
+        type: Boolean,
+        default: false
+    },
+    confirmationToken:{
+        type: String,
+        default:""
     }
 },{timestamp: true});
 
@@ -53,7 +61,8 @@ schema.methods.isValidPassword = function isValidPassword(password) {
 
 schema.methods.toAuthJSON = function toAuthJSON() {
     return  {
-        email:this.email,
+        email: this.email,
+        confirmed: this.confirmed,
         token: this.generateJWT()
     }
 }
