@@ -10,8 +10,7 @@ router.post('/',(req,res)=>{
             res.json({user: user.toAuthJSON()});
         }
         else{
-            console.log("data")
-            res.status(400).json({errors:{global:"Invalid Credentials"}})
+            res.status(400).json({errors:{global:"No account found for this email."}})
         }
     });
 })
