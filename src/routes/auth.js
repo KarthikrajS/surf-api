@@ -1,5 +1,7 @@
 import express from 'express';
 import User from '../models/User';
+import {sendResetPasswordEmail} from '../mailler'
+import jwt from 'jsonwebtoken';
 
 const router = express.Router();
 
